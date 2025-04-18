@@ -1,0 +1,16 @@
+/* klevtsevitch-site/app/[pageName]/page.module.css */
+.container {
+  display: flex;
+  justify-content: center; /* Центрирование по горизонтали */
+  align-items: center;    /* Центрирование по вертикали */
+  min-height: 90vh;       /* Минимальная высота почти на весь экран */
+  text-align: center;     /* Центрирование текста внутри h1, если он переносится */
+  padding: 20px;          /* Небольшие отступы по краям */
+}
+
+.title {
+  font-size: 3rem; /* Размер шрифта */
+  color: #e2dede;      /* Цвет текста */
+  font-family: sans-serif; /* Шрифт без засечек */
+  word-break: break-word; /* Перенос длинных слов, если они не влезают */
+}

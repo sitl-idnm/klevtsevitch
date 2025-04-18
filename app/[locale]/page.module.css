@@ -1,0 +1,211 @@
+/* Используем палитру:
+   Terracotta: #C87A6F
+   Beige: #D6A69A
+   Ochre: #E09F4A
+   Deep Blue: #404878
+   Dusty Purple: #85768D
+*/
+
+.mainContainer {
+  max-width: 850px;
+  margin: 60px auto;
+  padding: 45px 55px;
+  color: #404878; /* Текст: Deep Blue */
+  line-height: 1.75;
+  background-color: #fdfdfd; /* Почти белый фон */
+  border: 1px solid #eee; /* Светлая рамка */
+  border-radius: 8px;
+  box-shadow: 0 5px 20px rgba(64, 72, 120, 0.08); /* Тень с синеватым оттенком */
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+/* Стили для темной темы */
+@media (prefers-color-scheme: dark) {
+  .mainContainer {
+    background-color: #404878; /* Фон: Deep Blue */
+    color: #e8eaf6; /* Текст: Очень светлый синевато-серый */
+    border-color: #5c6bc0; /* Рамка: Светлее фона */
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  }
+  .header {
+     border-bottom-color: #5c6bc0; /* Разделитель */
+  }
+  .sectionTitle {
+     border-bottom-color: #E09F4A; /* Акцент: Ochre */
+     color: #ffffff; /* Заголовок: Белый */
+  }
+  .skillsList li {
+    background-color: #85768D; /* Фон плашек: Dusty Purple */
+    border-left-color: #E09F4A; /* Акцент: Ochre */
+    color: #ffffff; /* Текст на плашках: Белый */
+ }
+ .skillsList strong {
+   color: #f5f5f5; /* Акцент strong: Светлый */
+ }
+ .name {
+    color: #ffffff; /* Белый для имени */
+ }
+ .title {
+    color: #b0bec5; /* Приглушенный серо-синий */
+ }
+ .contactLink {
+    color: #e8eaf6; /* Основной текст темной темы */
+  }
+
+  .contactLink:hover {
+    color: #E09F4A; /* Акцент при наведении (Ochre) */
+    border-bottom-color: #E09F4A;
+  }
+  /* Стиль для никнейма в темной теме */
+  .nickname {
+     color: #b0bec5; /* Тот же цвет */
+  }
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 45px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.name {
+  font-size: 3rem; /* Крупнее */
+  margin-bottom: 10px;
+  font-weight: 700;
+  color: #C87A6F; /* Имя: Terracotta */
+  letter-spacing: -0.8px;
+}
+
+.title {
+  font-size: 1.4rem;
+  color: #dfb0f8; /* Подзаголовок: Dusty Purple */
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+/* Стиль для никнейма */
+.nickname {
+  font-size: 1rem;
+  color: #d2cbd6; /* Тот же цвет, что и title */
+  font-weight: 400;
+  margin-top: -5px; /* Чуть ближе к имени */
+  margin-bottom: 10px;
+}
+
+.section {
+  margin-bottom: 40px;
+}
+
+.sectionTitle {
+  font-size: 1.7rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #E09F4A; /* Акцент: Ochre */
+  color: #f5f5f5; /* Заголовок секции: Deep Blue */
+  display: inline-block;
+}
+
+.skillsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px; /* Чуть больше */
+}
+
+.skillsList li {
+  background-color: #f8f9fa; /* Светло-серый фон плашек */
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  border-left: 4px solid #C87A6F; /* Акцент: Terracotta */
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  box-shadow: 0 2px 5px rgba(64, 72, 120, 0.08);
+  color: #404878; /* Текст на плашках: Deep Blue */
+}
+
+.skillsList li:hover {
+   transform: translateY(-3px);
+   box-shadow: 0 4px 12px rgba(64, 72, 120, 0.12);
+}
+
+.skillsList strong {
+  font-weight: 700;
+  margin-right: 8px;
+  color: #C87A6F; /* Акцент strong: Terracotta */
+}
+
+/* --- Стили для списка контактов --- */
+.contactList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contactList li {
+  margin-bottom: 12px; /* Отступ между пунктами */
+}
+
+.contactLink {
+  color: #cacbcf; /* Основной цвет текста (Deep Blue) */
+  text-decoration: none;
+  font-weight: 500;
+  padding-bottom: 2px; /* Небольшой отступ для подчеркивания */
+  border-bottom: 1px dashed transparent; /* Пунктирное подчеркивание при наведении */
+  transition: color 0.2s, border-color 0.2s;
+  display: inline-block; /* Чтобы подчеркивание было по ширине текста */
+}
+
+.contactLink:hover {
+  color: #C87A6F; /* Акцент при наведении (Terracotta) */
+  border-bottom-color: #C87A6F;
+}
+/* --- Конец стилей для списка контактов --- */
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .mainContainer {
+    margin: 40px 15px; /* Уменьшим отступы по бокам */
+    padding: 30px 35px;
+  }
+  .name {
+    font-size: 2.5rem;
+  }
+  .title {
+    font-size: 1.25rem;
+  }
+  .sectionTitle {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .mainContainer {
+    margin: 20px 10px;
+    padding: 25px 20px;
+    border-radius: 5px;
+  }
+  .name {
+    font-size: 2.1rem;
+  }
+  .title {
+    font-size: 1.15rem;
+  }
+  .sectionTitle {
+    font-size: 1.35rem;
+  }
+  .skillsList li {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+  .header {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+  }
+  .section {
+    margin-bottom: 30px;
+  }
+}
